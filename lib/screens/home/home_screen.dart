@@ -187,7 +187,7 @@ class _HomeState extends State<Home> {
                           print("MINUTOS TOTAL: "+ minutoTotal.toString());
 
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => ResultScreen(total, trimming, carregado, resultHoras)
+                              builder: (context) => ResultScreen(horaTotal, minutoTotal, horaAtual.hour, horaAtual.minute)
                           ));
                         }
                       },

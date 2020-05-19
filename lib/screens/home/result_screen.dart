@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 
 class ResultScreen extends StatelessWidget {
 
-  double total, trimming, carregado, hora;
-  ResultScreen(this.total, this.trimming, this.carregado, this.hora);
+  var horaTotal, minutoTotal, horaAtual, minutoAtual;
+  ResultScreen(this.horaTotal, this.minutoTotal, this.horaAtual, this.minutoAtual);
 
   @override
   Widget build(BuildContext context) {
-
-    double resultadoFinal = total-trimming-carregado;
 
     return Scaffold(
       appBar: AppBar(
@@ -17,10 +15,19 @@ class ResultScreen extends StatelessWidget {
         backgroundColor: Colors.green[800],
       ),
       body: Container(
+        margin: const EdgeInsets.all(30),
+        width: MediaQuery.of(context).size.width,
         alignment: Alignment.center,
-        child: Text("RESULTADO: ${resultadoFinal} hr.", style: TextStyle(
-            color: Colors.black45, fontWeight: FontWeight.w600, fontSize: 18
-        ),),
+        child: Wrap(
+          alignment: WrapAlignment.center,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: <Widget>[
+            Text("RESULTADO: \n\nPara a hora ${horaAtual.toString()} : ${minutoAtual.toString()}, "
+                "a próxima carga será às ${horaTotal.toString()} : ${minutoTotal.toString().substring(0,2)}.", style: TextStyle(
+                color: Colors.black45, fontWeight: FontWeight.w600, fontSize: 18
+            ), textAlign: TextAlign.center,),
+          ],
+        ),
       ),
     );
   }
