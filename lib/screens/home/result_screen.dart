@@ -23,7 +23,7 @@ class ResultScreen extends StatelessWidget {
           crossAxisAlignment: WrapCrossAlignment.center,
           children: <Widget>[
             Text("RESULTADO: \n\nPara a hora ${horaAtual.toString()} : ${minutoAtual.toString()}, "
-                "a próxima carga será às ${horaTotal.toString()} : ${minutoTotal.toString().substring(0,2)}.", style: TextStyle(
+                "o próximo turno será às ${horaTotal.toString()} : ${minutoTotal.toString().substring(0,2)}.", style: TextStyle(
                 color: Colors.black45, fontWeight: FontWeight.w600, fontSize: 18
             ), textAlign: TextAlign.center,),
           ],
