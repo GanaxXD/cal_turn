@@ -1,16 +1,14 @@
-# calcfilipi_app
+# Calculadora de Turnos
 
-Um aplicativo para calcular turnos. Exclusivo para Filipi Esdras Correa
+O seguinte aplicativo foi solicitado por um amigo, com o objetivo de gerenciar os turnos para a realização da carga de minério para os navios. O aplicativo calcula com base em algumas entradas, a hora exata que o operador deverá recarregar o próximo navio à atracar no porto. Exclusivo para Filipi Êsdras Correa
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tecnologias Usadas
+Para o aplicativo, foram usadas as seguintes tecnologias:  
+- Dart (Linguagem de Programação)
+- Flutter (*Framework*)
+- Android Studio (IDE)
+  
+  
+  
+## Visão geral do sistema
+O sistema desenvolvido é bastante simples, sendo composto apenas de duas telas: a principal, que recebe os dados fornecidos pelo operador, e a tela de resultado, que exibe o horário para a próxima carga. Segue abaixo a demonstração do aplicativo final.
