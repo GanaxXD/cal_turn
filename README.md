@@ -1,6 +1,6 @@
 # Calculadora de Turnos
 
-O seguinte aplicativo foi solicitado por um amigo, com o objetivo de gerenciar os turnos para a realização da carga de minério para os navios. O aplicativo calcula com base em algumas entradas, a hora exata que o operador deverá recarregar o próximo navio à atracar no porto. Exclusivo para Filipi Êsdras Correa
+O seguinte aplicativo foi solicitado por um colaborador isolado, com o objetivo de gerenciar os turnos para a realização da carga de minério para os navios. O aplicativo calcula com base em algumas entradas, a hora exata que o operador deverá recarregar o próximo navio à atracar no porto..
 
 ## Tecnologias Usadas
 Para o aplicativo, foram usadas as seguintes tecnologias:  
