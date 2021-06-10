@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class ResultScreen extends StatelessWidget {
 
   double total, trimming, carregado, hora;
-  ResultScreen(this.total, this.trimming, this.carregado, this.hora);
+  String result;
+  ResultScreen(this.total, this.trimming, this.carregado, this.hora, this.result);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,8 @@ class ResultScreen extends StatelessWidget {
       ),
       body: Container(
         alignment: Alignment.center,
-        child: Text("RESULTADO: ${resultadoFinal} hr.", style: TextStyle(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Text("RESULTADO: ${result}", style: TextStyle(
             color: Colors.black45, fontWeight: FontWeight.w600, fontSize: 18
         ),),
       ),

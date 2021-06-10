@@ -68,7 +68,7 @@ class _HomeState extends State<Home> {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               Form_FieldNumber(
-                label: "Carga Total",
+                label: "Carga Total (ex: 230000)",
                 hint: "Digite um valor",
                 helper: "Informe a carga total",
                 controller: _cargaTotal,
@@ -83,7 +83,7 @@ class _HomeState extends State<Home> {
               ),
 
               Form_FieldNumber(
-                label: "Carga de Trimming",
+                label: "Carga de Trimming (ex: 120000)",
                 hint: "Digite um valor",
                 helper: "Informe a carga de trimming",
                 controller: _cargaTrimming,
@@ -98,7 +98,7 @@ class _HomeState extends State<Home> {
               ),
 
               Form_FieldNumber(
-                label: "Total Carregado",
+                label: "Total Carregado (ex: 10000)",
                 hint: "Digite um valor",
                 helper: "Informe o total carregado",
                 controller: _cargaCarregada,
@@ -113,7 +113,7 @@ class _HomeState extends State<Home> {
               ),
 
               Form_FieldNumber(
-                label: "Fluxo do Sistema",
+                label: "Fluxo do Sistema (ex: 100000)",
                 hint: "Digite um valor",
                 helper: "Informe o fluxo do sistema",
                 controller: _fluxoSistema,
@@ -187,7 +187,9 @@ class _HomeState extends State<Home> {
                           print("MINUTOS TOTAL: "+ minutoTotal.toString());
 
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => ResultScreen(total, trimming, carregado, resultHoras)
+                              builder: (context) => ResultScreen(total, trimming,
+                                  carregado, resultHoras,
+                                  "${horaTotal.toString()} horas e ${minutoTotal.toString()} minutos para a próxima carga.")
                           ));
                         }
                       },
