@@ -146,8 +146,48 @@ class _HomeState extends State<Home> {
                           print(trimming.toString());
                           print(carregado.toString());
                           print(fluxo.toString());
+                          var horaAtual = DateTime.now();
+                          print("HORA: "+ horaAtual.hour.toString());
+                          print("MINUTOS: "+horaAtual.minute.toString());
+
+                          //Calculo da Hora:
+                          resultHoras = (total - trimming - carregado) / fluxo;
+                          print("resultHoras: "+resultHoras.toString());
+                          //Separando a parte inteira da hora
+                          var resutHorasHora = resultHoras.truncate();
+                          print("resultHorasHora: "+resutHorasHora.toString());
+                          //separando os minutos da hora
+                          var resultHorasMinuto = (((resultHoras - resutHorasHora) * 100)*0.60);
+                          print ("resultHorasMinuto: " + resultHorasMinuto.toString());
+
+                          //total
+                          var horaTotal, minutoTotal, x, y=0, z=0.0;
+
+                          if(horaAtual.minute + resultHorasMinuto > 60){
+                            x = ((horaAtual.minute + resultHorasMinuto)/60);
+                            print("X: "+ x.toString());
+                            y = x.truncate();
+                            print("Y: "+ y.toString());
+                            z = ((x - y)*100)*0.60;
+                            print ("Z: "+ z.toString());
+                            minutoTotal = z;
+                          } else {
+                            minutoTotal = horaAtual.minute + resultHorasMinuto;
+                          }
+
+                          if(horaAtual.hour + resutHorasHora + y > 24){
+                            horaTotal = (horaAtual.hour + resutHorasHora + y) - 24;
+                            print("HORA TOTAL: "+horaTotal.toString());
+                          } else {
+                            horaTotal = (horaAtual.hour + resutHorasHora + y);
+                            print("HORA TOTAL: "+horaTotal.toString());
+                          }
+
+                          print("HORA TOTAL: "+ horaTotal.toString());
+                          print("MINUTOS TOTAL: "+ minutoTotal.toString());
+
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => ResultScreen(total, trimming, carregado, resultHoras)
+                              builder: (context) => ResultScreen(horaTotal, minutoTotal, horaAtual.hour, horaAtual.minute)
                           ));
                         }
                       },
