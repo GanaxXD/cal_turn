@@ -190,6 +190,7 @@ class _HomeState extends State<Home> {
                               builder: (context) => ResultScreen(total, trimming,
                                   carregado, resultHoras,
                                   "${horaTotal.toString()} horas e ${minutoTotal.toString()} minutos para a próxima carga.")
+
                           ));
                         }
                       },
